@@ -1,0 +1,30 @@
+#install rdp
+#https://docs.microsoft.com/en-us/azure/virtual-machines/linux/use-remote-desktop
+
+sudo apt-get update
+sudo apt-get -y install xfce4
+
+sudo apt-get -y install xrdp
+sudo systemctl enable xrdp
+
+echo xfce4-session >~/.xsession
+
+sudo service xrdp restart
+#vbox
+#https://tecadmin.net/install-virtualbox-on-ubuntu-18-04/
+
+
+sudo apt update
+sudo apt upgrade
+
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+
+sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib"
+
+sudo apt update
+
+sudo apt install virtualbox-6.1
+
+
