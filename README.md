@@ -1,0 +1,2 @@
+# AzureLab
+Scripts for azure
