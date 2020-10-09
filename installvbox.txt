@@ -27,4 +27,11 @@ sudo apt update
 
 sudo apt install virtualbox-6.1
 
+#mount existing disk
+lsblk -o NAME,HCTL,SIZE,MOUNTPOINT | grep -i "sd"
+sudo mkdir /datadrive
+sudo mount /dev/sdc1 /datadrive
+sudo blkid
 
+sudo nano /etc/fstab
+#add UUID=<UUID from blkid>   /datadrive   ext4   defaults,nofail   1   2
